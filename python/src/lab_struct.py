@@ -43,7 +43,6 @@ def checkSalary(salary: int) -> int:
     try:
         if (salary>=15000):
             return salary
-        raise ValueError;
-    except ValueError:
-        print("Ошибка: Минимальная зарплата 15000")
-        return 15000
+        raise ValueError("Ошибка: Минимальная зарплата 15000");
+    except ValueError as error:
+        print(str(error));

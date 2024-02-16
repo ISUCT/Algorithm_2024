@@ -1,7 +1,5 @@
-def summ(a: int, b: int) -> int:
-    return a + b
-
+from dish import Dish
 
 if __name__ == "__main__":
-    print("Hello world")
-    print(summ(3, 4))
+    dish = Dish("Борщ", "Суп", 500)
+    print(dish.info)

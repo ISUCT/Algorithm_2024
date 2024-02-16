@@ -1,5 +1,6 @@
 import lab_struct
 
+
 if __name__=="__main__":
     print("Коротков Михаил Александрович 1/278")
     print("Рабочий 1")

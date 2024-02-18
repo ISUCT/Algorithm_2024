@@ -1,11 +1,11 @@
-from lab6 import cat
+import cat
 
 if __name__ == "__main__":
     cat1 = cat.Cat(6, "Tiger", "Siamese")
     cat2 = cat.Cat(9, "No name", "unknown")
 
     cat1.age = 3
-    
+
     cat2.name = "Marshal"
     cat1.name = "Luna"
 

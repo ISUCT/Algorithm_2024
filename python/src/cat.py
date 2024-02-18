@@ -20,11 +20,11 @@ class Cat():
     @property
     def breed(self) -> str:
         return self.__breed
-    
+
     @property
     def name(self) -> str:
         return self.__name
-    
+
     @name.setter
     def name(self, name):
         self.__name = name

@@ -9,7 +9,7 @@ class Employee:
 
     def get_date(self):
         return self.__date
-  
+
     def get_age(self):
         return self.age
 

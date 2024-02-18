@@ -3,7 +3,7 @@ class Cat():
     __name = ""
     __breed = ""
 
-    def __init__(self, age, name, breed):
+    def __init__(self, age: int, name: str, breed: str):
         self.age = age
         self.__name = name
         self.__breed = breed
@@ -13,7 +13,7 @@ class Cat():
         return self.__age
 
     @age.setter
-    def age(self, age):
+    def age(self, age: int):
         assert (age >= 0 and age <= 25), "Invalid age"
         self.__age = age
 
@@ -26,7 +26,7 @@ class Cat():
         return self.__name
 
     @name.setter
-    def name(self, name):
+    def name(self, name: str):
         self.__name = name
 
     def petTheCat(self):

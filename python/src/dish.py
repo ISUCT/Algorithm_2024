@@ -34,6 +34,7 @@ class Dish:
         if price >= 5000 or price <= 0:
             raise ValueError("Это блюдо вам не по карману")
 
+    @property
     def info(self) -> str:
         return f"""Цена: {self.price}
 Название: {self.name}

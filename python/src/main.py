@@ -1,5 +1,7 @@
-from dish import Dish
+# type: ignore
+import dish
+
 
 if __name__ == "__main__":
-    dish = Dish("Борщ", "Суп", 500)
-    print(dish.info())
+    dish = dish.Dish("Борщ", "Суп", 500)
+    print(dish.info)

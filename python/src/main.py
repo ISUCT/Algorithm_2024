@@ -1,3 +1,4 @@
+# type: ignore
 import cat
 
 if __name__ == "__main__":

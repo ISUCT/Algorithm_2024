@@ -1,7 +1,5 @@
-def summ(a: int, b: int) -> int:
-    return a + b
-
+from car import Car
 
 if __name__ == "__main__":
-    print("Hello world")
-    print(summ(3, 4))
+    car = Car(10000, 1500, "Машына")
+    print(car.mashina)

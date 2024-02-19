@@ -1,7 +1,22 @@
-def summ(a: int, b: int) -> int:
-    return a + b
-
+# type: ignore
+import rabbitStruct
 
 if __name__ == "__main__":
-    print("Hello world")
-    print(summ(3, 4))
+    rabbit = rabbitStruct.Rabbit("Benjamin", 5, 3)
+
+    try:
+        rabbitStruct.Rabbit(55, 5, 3)
+    except Exception as e:
+        print("error:", e)
+
+    try:
+        rabbitStruct.Rabbit("Dima", 10.5, 7)
+    except Exception as e:
+        print("error:", e)
+
+    try:
+        rabbitStruct.Rabbit("Alice", 20, 15)
+    except Exception as e:
+        print("error:", e)
+
+    print(str(rabbit))

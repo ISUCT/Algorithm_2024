@@ -1,7 +1,6 @@
-def summ(a: int, b: int) -> int:
-    return a + b
-
-
-if __name__ == "__main__":
-    print("Hello world")
-    print(summ(3, 4))
+import lab5pyt
+if __name__ == '__main__':
+    comp = (lab5pyt.Comp(1024, 'Kingston', 'HDD'))
+    comp.set_name('Hollow Purple')
+    comp.set_value(512)
+    print(comp.get_value(), comp.get_name(), comp.get_type())

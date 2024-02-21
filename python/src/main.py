@@ -1,7 +1,5 @@
-def summ(a: int, b: int) -> int:
-    return a + b
+from lab5 import Car
 
-
-if __name__ == "__main__":
-    print("Hello world")
-    print(summ(3, 4))
+car1 = Car("BMW e34", 220, 1865000, 432057)
+car2 = Car("Lexus ls400", 130, 900000, 653285)
+print(car1.model)

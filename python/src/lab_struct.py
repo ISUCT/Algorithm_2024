@@ -2,13 +2,16 @@ class Worker:
     def __init__(self, name, status: str, salary_worker: int):
         self.__name: str = name
         self.__status: str = status
-        self.__salary: int = checkSalary(salary_worker)
+        try:
+            self.__salary: int = checkSalary(salary_worker)
+        except ValueError as error:
+            print(str(error))
     
     def __del__(self):
         print(f"{self.__name} был удалён")
 
     def __str__(self) -> str:
-        return (f'Имя {self.__name} Статус {self.__status} Зп {self.__salary}')
+        return (f'Имя: {self.__name} Ранг: {self.__status} Зп {self.__salary}')
 
     def come(self):
         print(f"{self.__name} пришёл на работу.")
@@ -39,9 +42,6 @@ class Worker:
 
 
 def checkSalary(salary: int) -> int:
-    try:
-        if (salary >= 15000):
-            return salary
-        raise ValueError("Ошибка: Минимальная зарплата 15000")
-    except ValueError as error:
-        print(str(error))
+    if (salary >= 15000):
+        return salary
+    raise ValueError("Ошибка: Минимальная зарплата 15000")

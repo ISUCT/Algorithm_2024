@@ -38,7 +38,10 @@ class Worker:
 
     @salary.setter
     def salary(self, salary: int):
-        self.__salary: int = checkSalary(salary)
+        try:
+            self.__salary: int = checkSalary(salary)
+        except ValueError as error:
+            print(str(error))
 
 
 def checkSalary(salary: int) -> int:

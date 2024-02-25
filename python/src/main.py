@@ -1,7 +1,5 @@
-def summ(a: int, b: int) -> int:
-    return a + b
-
-
-if __name__ == "__main__":
-    print("Hello world")
-    print(summ(3, 4))
+from lab5 import *
+table = (Table(450, '350', 'Деревянный')) 
+table.set_lenght(600) 
+table.set_width(200) 
+print(table.get_lenght(), table.get_width(), table.get_type())

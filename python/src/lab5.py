@@ -1,7 +1,8 @@
 class Person:
     def __init__(self, name, age, gender):
         self._name = name    
-        self._age = self.set_age(age)   
+        self.set_age(age)  
+        self._age
         self._gender = gender
     
     def get_name(self):

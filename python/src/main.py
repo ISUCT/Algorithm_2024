@@ -1,7 +1,11 @@
-def summ(a: int, b: int) -> int:
-    return a + b
+import lab5
 
+ap1 = lab5.Airplane("Russian airplane", 3, "Russia")
+ap2 = lab5.Airplane("Some Airbus", 853, "France")
 
-if __name__ == "__main__":
-    print("Hello world")
-    print(summ(3, 4))
+try:
+    ap1.set_speed(11111)
+except Exception as error:
+    print("Error occured:", error)
+
+ap1.print_airplane()

@@ -1,7 +1,5 @@
-def summ(a: int, b: int) -> int:
-    return a + b
-
+import __init__
 
 if __name__ == "__main__":
-    print("Hello world")
-    print(summ(3, 4))
+    country1 = __init__.Country("Россия", 146447424, 17098246)
+    country1.output()

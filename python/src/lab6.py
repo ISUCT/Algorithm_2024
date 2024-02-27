@@ -1,7 +1,8 @@
 class Fox:
     def __init__(self, name, age, color):
         self._name = name
-        self._age = self.set_age(age)
+        self.set_age(age)
+        self._age = age
         self._color = color
     def get_name(self):
         return self._name

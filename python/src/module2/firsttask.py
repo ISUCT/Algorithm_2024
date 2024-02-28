@@ -1,3 +1,6 @@
+N = int(input())
+nums = list(map(int, input().split()))
+
 def bubbles(nums):
     len_nums = len(nums)
     s = 0
@@ -9,8 +12,6 @@ def bubbles(nums):
                 print(*nums)
     if s == 0:
         print(0)
-
-N = int(input())
-nums = list(map(int, input().split()))
+        
 bubbles(nums)
 

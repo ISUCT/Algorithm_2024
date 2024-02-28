@@ -7,4 +7,3 @@ Person1.get()
 Person2 = lab6PY.Person("Vlad", 21, 50.5, 2.0 )
 
 Person2.get()
-

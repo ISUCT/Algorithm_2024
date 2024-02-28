@@ -1,7 +1,5 @@
-def summ(a: int, b: int) -> int:
-    return a + b
-
+import __init__
 
 if __name__ == "__main__":
-    print("Hello world")
-    print(summ(3, 4))
+    gun1 = __init__.Cat("Colt", 9, "Steel")
+    gun1.vivod()

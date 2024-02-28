@@ -1,26 +1,23 @@
+def bubble(numbers):
+    n = len(numbers)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if numbers[j][1] < numbers[j+1][1]:
+                numbers[j], numbers[j+1] = numbers[j+1], numbers[j]
+            if numbers[j][1] == numbers[j+1][1]:
+                numbers[j], numbers[j + 1] = numbers[j + 1], numbers[j]
+            if numbers[j][0] > numbers[j+1][0]:
+                numbers[j], numbers[j + 1] = numbers[j + 1], numbers[j]
+
+    return numbers
+
+n = int(input())
 nums = []
-n = int(input("Введите длину списка: "))
-def bubbles(nums):
-    n = len(nums)
-#для i в промежутке n-1 с последнего до второго
-    for i in range(n - 1, 0, -1):
-        for j in range(i):
-            if nums[j][1] > nums[j + 1][1]:
-                nums[j], nums[j + 1] = nums[j + 1], nums[j]
-    return nums
+for _ in range(n):
+    num1, num2 = map(int, input().split())
+    nums.append((num1, num2))
 
-
-while len(nums) < n:
-    act = input("Введите пары чисел: ")
-    numbers = act.split()
-    try:
-        num1 = int(numbers[0])
-        num2 = int(numbers[1])
-        nums.append((num1, num2))
-    except:
-        print("Вы должны ввести ДВА числа!")
-
-answer = bubbles(nums)
-for a in answer:
-    print(*a)
+sort = bubble(nums)
+for nums in sort:
+    print(nums[0], nums[1])
 

@@ -1,11 +1,3 @@
-def countSort(arr, maxNum):
-    countArr = []
-    countArr = countArr + [0] * (maxNum + 1)
-    for i in range(len(arr)):
-        countArr[arr[i] - 1] += 1
-    
-    return countArr
-
 def clearProc(proc, alphabetLength):
     for i in range(alphabetLength):
         proc[i] = []

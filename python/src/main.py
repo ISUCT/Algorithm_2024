@@ -1,7 +1,7 @@
-def summ(a: int, b: int) -> int:
-    return a + b
+# type: ignore
+import dish
 
 
 if __name__ == "__main__":
-    print("Hello world")
-    print(summ(3, 4))
+    dish = dish.Dish("Борщ", "Суп", 500)
+    print(dish.info)

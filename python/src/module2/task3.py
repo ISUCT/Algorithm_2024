@@ -1,4 +1,4 @@
-nums = list(map(int, input("Введите числа: ").split()))
+nums = list(map(int, input().split()))
 def merge_sort(nums):
     n = len(nums)
     if len(nums) == 1:
@@ -8,7 +8,6 @@ def merge_sort(nums):
     left_half = merge_sort(nums[:len(nums) // 2])
     right_half = merge_sort(nums[len(nums) // 2:])
     i = j = k = 0
-#Создаем список zlist, который будет состоять из нулей и по длине равный nums
     zlist = [0] * len(nums)
     while i < len(left_half) and j < len(right_half):
         if left_half[i] <= right_half[j]:

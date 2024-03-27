@@ -1,7 +1,11 @@
-def summ(a: int, b: int) -> int:
-    return a + b
-
+import fox
 
 if __name__ == "__main__":
-    print("Hello world")
-    print(summ(3, 4))
+    alissa = fox.Fox("Alissa", 0, "female")
+    
+    try:
+        alissa.set_age(12)
+    except Exception as error: 
+        print("Error:", error)
+
+    print(alissa.displayfox())  

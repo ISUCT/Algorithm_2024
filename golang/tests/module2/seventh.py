@@ -1,4 +1,3 @@
-## Неправильно
 def counting(mas, pos):
     key1 = min([int(x[pos]) for x in mas])
     key2 = max([int(x[pos]) for x in mas])
@@ -21,7 +20,7 @@ def every_phase(mas, pos):
     print(f'Phase {abs(pos)}')
     for i in range(10):
         check = [x for x in mas if int(x[pos]) == i]
-        print(f'Basket {i}:', end=' ')
+        print(f'Bucket {i}:', end=' ')
         if len(check) > 0:
             print(*check, sep=', ')
         else:
@@ -33,7 +32,7 @@ def r_sort(mas):
         mas = counting(mas, i)
         every_phase(mas, i)
         print('*' * 10)
-    print("Array:")
+    print("Sorted array:")
     print(*mas, sep=", ")
 
 

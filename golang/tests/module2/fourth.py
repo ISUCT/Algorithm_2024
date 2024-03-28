@@ -1,44 +1,42 @@
 ## Лимит времени на 19 (1.08 секунд)
-def merge(arr, mas, low, mid, top):
- 
-    current = i = low
-    forward = mid + 1
-    inversionCount = 0
-    while i <= mid and forward <= top:
-        if arr[i] <= arr[forward]:
-            mas[current] = arr[i]
-            i += 1
+def merge(a, b, low, left, right):
+    i = low
+    k = low
+    j = left + 1
+    inversion_count = 0
+    while i <= left and j <= right:
+        if a[i] <= a[j]:
+            b[k] = a[i]
+            i = i + 1
         else:
-            mas[current] = arr[forward]
-            forward += 1
-            inversionCount += (mid - i + 1)
-        current += 1
-    while i <= mid:
-        mas[current] = arr[i]
-        current += 1
-        i += 1 
-    for i in range(low, top + 1):
-        arr[i] = mas[i]
-    return inversionCount
- 
- 
-def sort(arr, mas, low, top):
-    if top <= low:    
-        return 0
-    mid = low + ((top - low) >> 1)
-    inversionCount = 0
-    inversionCount += sort(arr, mas, low, mid)      
-    inversionCount += sort(arr, mas, mid + 1, top)  
-    inversionCount += merge(arr, mas, low, mid, top)     
-    return inversionCount
- 
+            b[k] = a[j]
+            j = j + 1
+            inversion_count += (left - i + 1)
+        k = k + 1
+    while i <= left:
+        b[k] = a[i]
+        k = k + 1
+        i = i + 1
+    for i in range(low , right + 1):
+        a[i] = b[i]
+    return inversion_count
 
-if __name__ == '__main__':
-    a = int(input())
-    if a == 1:
-        arr = int(input())
+def sort(a, b, low, large):
+    if large <= low:
+        return 0
+    average = low + ((large - low) >> 1)
+    inversion_count = 0
+    inversion_count += sort(a, b, low, average)
+    inversion_count += sort(a, b, average + 1, large)
+    inversion_count += merge(a, b, low, average, large)
+    return inversion_count
+
+if __name__ == "__main__":
+    s = int(input())
+    if s == 1:
+        a = int(input())
         print(0)
     else:
-        arr = list(map(int, input().split()))
-        mas = arr.copy()
-        print(sort(arr, mas, 0, len(arr) - 1))
+        a = list(map(int, input().split()))
+        b = a.copy()
+        print(sort(a, b, 0, len(a) - 1))

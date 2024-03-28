@@ -1,4 +1,3 @@
-## Лимит времени на 19 (1.08 секунд)
 def merge(a, b, low, left, right):
     i = low
     k = low
